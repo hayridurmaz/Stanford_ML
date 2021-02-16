@@ -13,8 +13,7 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-i = 1:m;
-J = (1/(2*m)) * sum( ((theta(1) + theta(2) .* X(i,2)) - y(i)) .^ 2); % Un-Vectorized
+J = sum((X * theta - y) .^ 2) / (2 * m);
 
 % =========================================================================
 
